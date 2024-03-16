@@ -1,4 +1,4 @@
-package com.taktak.service.login;
+package com.taktak.service.login.value;
 
 /*
  * @Author Amine Taktak

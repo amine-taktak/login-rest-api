@@ -6,6 +6,8 @@ package com.taktak.service.login;
  * @created 15.03.21:13
  */
 
+import com.taktak.service.login.value.UserCredentialsTO;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
