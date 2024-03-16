@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:schemalocation="http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
-             version="2.2">
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
 
-    <persistence-unit name="loginPU">
+<persistence-unit name="loginPU">
         <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
         <class>com.taktak.persistence.entity.UserEntity</class>
         <properties>

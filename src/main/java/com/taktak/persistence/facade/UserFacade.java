@@ -20,7 +20,7 @@ public class UserFacade {
 
     public List<UserEntity> findUserByUsernameAndPassword(final String uname, final String pwd) {
         // Use JPQL to make the query
-        TypedQuery<UserEntity> query = entityManager.createQuery("select u from UserEntity u where u.username =: uname and u.password := pwd", UserEntity.class);
+        TypedQuery<UserEntity> query = entityManager.createQuery("select u from UserEntity u where u.username = :uname and u.password = :pwd", UserEntity.class);
         query.setParameter("uname", uname);
         query.setParameter("pwd", pwd);
         return query.getResultList();
