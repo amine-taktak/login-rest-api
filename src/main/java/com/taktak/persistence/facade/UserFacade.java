@@ -4,6 +4,7 @@ package com.taktak.persistence.facade;/*
  * @created 16.03.12:31
  */
 
+import com.sun.jersey.spi.inject.Inject;
 import com.taktak.persistence.entity.UserEntity;
 
 import javax.persistence.EntityManager;
@@ -12,8 +13,8 @@ import java.util.List;
 
 public class UserFacade {
 
+    @Inject
     private EntityManager entityManager;
-
 
     public List<UserEntity> findUserByUsernameAndPassword(final String uname, final String pwd) {
         // Use JPQL to make the query
