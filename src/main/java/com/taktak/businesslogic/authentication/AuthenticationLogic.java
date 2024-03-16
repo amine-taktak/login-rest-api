@@ -1,17 +1,19 @@
-package com.taktak.businesslogic.authentication;/*
- * @Author Amine Taktak
- * @project login-rest-api
- * @created 16.03.13:03
- */
+package com.taktak.businesslogic.authentication;
 
 import com.sun.jersey.spi.inject.Inject;
+import com.taktak.businesslogic.exception.NoUserFoundException;
 import com.taktak.businesslogic.value.UserBO;
 import com.taktak.persistence.entity.UserEntity;
 import com.taktak.persistence.facade.UserFacade;
-import com.taktak.businesslogic.exception.NoUserFoundException;
 
 import java.util.List;
 
+/*
+ * @Author Amine Taktak
+ * @project login-rest-api
+ * @created 16.03.13:03
+ * @Description This class respresents the handling logic for the user authentication
+ */
 public class AuthenticationLogic {
 
     @Inject

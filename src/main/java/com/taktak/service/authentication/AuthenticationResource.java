@@ -1,11 +1,5 @@
 package com.taktak.service.authentication;
 
-/*
- * @Author Amine Taktak
- * @project login-rest-api
- * @created 15.03.21:14
- */
-
 import com.sun.jersey.spi.inject.Inject;
 import com.taktak.businesslogic.authentication.AuthenticationLogic;
 import com.taktak.businesslogic.exception.NoUserFoundException;
@@ -19,6 +13,12 @@ import javax.json.JsonObject;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
+/*
+ * @Author Amine Taktak
+ * @project login-rest-api
+ * @created 15.03.21:14
+ * @Description This class represents the RESTful Resource for user authentication.
+ */
 @Path("/authentication")
 public class AuthenticationResource implements AuthenticationApi {
 
@@ -53,13 +53,13 @@ public class AuthenticationResource implements AuthenticationApi {
 
     }
 
-private static UserTO mapUserBOToUserTO(UserBO userBO) {
-    UserTO userTO = new UserTO();
-    userTO.setUserId(userBO.getUserId());
-    userTO.setFirstname(userBO.getFirstname());
-    userTO.setLastname(userBO.getLastname());
-    userTO.setUsername(userBO.getUsername());
-    userTO.setAcessToken((userBO.getAcessToken()));
-    return userTO;
-}
+    private static UserTO mapUserBOToUserTO(UserBO userBO) {
+        UserTO userTO = new UserTO();
+        userTO.setUserId(userBO.getUserId());
+        userTO.setFirstname(userBO.getFirstname());
+        userTO.setLastname(userBO.getLastname());
+        userTO.setUsername(userBO.getUsername());
+        userTO.setAcessToken((userBO.getAcessToken()));
+        return userTO;
+    }
 }

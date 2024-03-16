@@ -15,6 +15,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+/*
+ * @Author Amine Taktak
+ * @project login-rest-api
+ * @created 15.03.21:14
+ * @Description This class represents the RESTful API for user authentication.
+ */
 public interface AuthenticationApi {
 
     /**  Attempts to log into the application (http://localhost:8080/login-rest-api/rest/authentication/login).

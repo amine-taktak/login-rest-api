@@ -2,6 +2,7 @@ package com.taktak.service.value;/*
  * @Author Amine Taktak
  * @project login-rest-api
  * @created 16.03.12:31
+ * @Description This class represents the transport object for the user.
  */
 public class UserTO {
 

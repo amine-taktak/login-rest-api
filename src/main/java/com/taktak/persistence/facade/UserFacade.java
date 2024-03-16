@@ -1,19 +1,21 @@
-package com.taktak.persistence.facade;/*
- * @Author Amine Taktak
- * @project login-rest-api
- * @created 16.03.12:31
- */
+package com.taktak.persistence.facade;
 
-import com.sun.jersey.spi.inject.Inject;
 import com.taktak.persistence.entity.UserEntity;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+/*
+ * @Author Amine Taktak
+ * @project login-rest-api
+ * @created 16.03.12:31
+ * @Description  This class serves as the facade for user-related operations with the database
+ */
 public class UserFacade {
 
-    @Inject
+    @PersistenceContext
     private EntityManager entityManager;
 
     public List<UserEntity> findUserByUsernameAndPassword(final String uname, final String pwd) {

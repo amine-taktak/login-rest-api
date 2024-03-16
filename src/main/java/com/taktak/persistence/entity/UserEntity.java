@@ -5,6 +5,7 @@ import javax.persistence.*;
  * @Author Amine Taktak
  * @project login-rest-api
  * @created 16.03.12:33
+ * @Description This class represents the User entity.
  */
 @Entity
 public class UserEntity {
