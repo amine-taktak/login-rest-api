@@ -2,9 +2,7 @@ package com.taktak.persistence.facade;
 
 import com.taktak.persistence.entity.UserEntity;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.List;
 
 /*
@@ -15,10 +13,17 @@ import java.util.List;
  */
 public class UserFacade {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    private EntityManagerFactory entityManagerFactory;
+
+    public UserFacade() {
+        // Create an EntityManagerFactory using persistence unit named "loginPU"
+        entityManagerFactory = Persistence.createEntityManagerFactory("loginPU");
+    }
 
     public List<UserEntity> findUserByUsernameAndPassword(final String uname, final String pwd) {
+        // Create an EntityManager
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
         // Use JPQL to make the query
         TypedQuery<UserEntity> query = entityManager.createQuery("select u from UserEntity u where u.username = :uname and u.password = :pwd", UserEntity.class);
         query.setParameter("uname", uname);
