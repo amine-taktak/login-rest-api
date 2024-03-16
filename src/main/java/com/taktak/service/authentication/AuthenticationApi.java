@@ -1,4 +1,4 @@
-package com.taktak.service.login;
+package com.taktak.service.authentication;
 
 /*
  * @Author Amine Taktak
@@ -6,7 +6,7 @@ package com.taktak.service.login;
  * @created 15.03.21:13
  */
 
-import com.taktak.service.login.value.UserCredentialsTO;
+import com.taktak.service.authentication.value.UserCredentialsTO;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
