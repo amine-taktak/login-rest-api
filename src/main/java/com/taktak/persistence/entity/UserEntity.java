@@ -8,6 +8,7 @@ import javax.persistence.*;
  * @Description This class represents the User entity.
  */
 @Entity
+@Table(name = "user")
 public class UserEntity {
 
     @Id

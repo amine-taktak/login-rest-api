@@ -1,2 +1,2 @@
-INSERT INTO user (user_id, firstname, lastname, username, password) VALUES (3, 'Jane', 'Smith', 'jane-smith', '12345');
-INSERT INTO user (user_id, firstname, lastname, username, password) VALUES (4, 'Joe', 'Doe', 'joe-doe', '12345');
+INSERT INTO user (user_id, firstname, lastname, username, password, access_token) VALUES (3, 'Jane', 'Smith', 'jane-smith', '12345', "token");
+INSERT INTO user (user_id, firstname, lastname, username, password, access_token) VALUES (4, 'Joe', 'Doe', 'joe-doe', '12345', "token");

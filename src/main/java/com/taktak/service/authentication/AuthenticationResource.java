@@ -37,6 +37,7 @@ public class AuthenticationResource implements AuthenticationApi {
         if (userBO != null) {
             // Map business object to transport object
             UserTO userTO = mapUserBOToUserTO(userBO);
+
             // Create JSON response with the user details
             JsonObject jsonResponse = Json.createObjectBuilder()
                     .add("id", userTO.getUserId())
