@@ -46,7 +46,8 @@ public class AuthenticationResource implements AuthenticationApi {
                     .add("username", userTO.getUsername())
                     .add("accessToken", userTO.getAcessToken())
                     .build();
-            return Response.status(Response.Status.OK).entity(jsonResponse).build();
+
+            return Response.status(Response.Status.OK).entity(jsonResponse.toString()).build();
         }
 
         // If authentication fails, return unauthorized response
