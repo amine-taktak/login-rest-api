@@ -16,6 +16,6 @@ public class UserNotFoundMapper implements ExceptionMapper<NoUserFoundException>
 
     @Override
     public Response toResponse(NoUserFoundException e) {
-       return Response.status(Response.Status.NOT_FOUND).entity("User not found").build();
+       return Response.status(Response.Status.UNAUTHORIZED).entity("User not found").build();
     }
 }
