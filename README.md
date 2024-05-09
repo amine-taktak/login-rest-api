@@ -1,11 +1,12 @@
 # Login-REST-API-Example
 
-This repository contains an example source, how to use JAX-RS to develop a simple login application. 
-When a client (e.g., Postman or cURL) sends an HTTP POST with crendentials consisting of the username 
-und password, the application validates these credentials against a H2 database. If the user is found 
-based on the provided username and password, a response with HTTP status code of 200 OK, along with the
-user details, is sent back to the user. If the user is not found, a response with HTTP status code of
-401 Unauthorized and a message stating "User not found" is returned.
+This repository contains an example source, how to use Jersey as one of serveral implementations of the 
+JAX-RS (Java API for RESTful Webservices) to develop a simple login application. When a client 
+(e.g., Postman or cURL) sends an HTTP POST with crendentials consisting of the username und password,
+the application validates these credentials against a H2 database. If the user is found based on the
+provided username and password, a response with HTTP status code of 200 OK, along with the user details,
+is sent back to the user. If the user is not found, a response with HTTP status code of 401 Unauthorized
+and a message stating "User not found" is returned.
 
 
 
